@@ -1,17 +1,18 @@
 import React from 'react';
-import unnamed from './unnamed.png'; // Replace this with the correct path to your logo image
-import './Sidebar.css'; // Ensure this CSS file exists and contains styles for the sidebar
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import unnamed from './unnamed.png';
+import './Sidebar.css';
 
 const Sidebar = () => {
-  return (
+ return (
     <div className="sidebar">
       <img src={unnamed} alt="Logo" className="sidebar-logo" />
       <div className="sidebar-list-container">
         <ul>
-          <li>Home</li>
-          <li>Search</li>
-          <li>Your Libraries</li>
-          <li>Create Playlists</li>
+          <li><Link to="/">Home</Link></li> {/* Use Link for navigation */}
+          <li><Link to="/">Search</Link></li>
+          <li><Link to="/">Your Libraries</Link></li>
+          <li><Link to="/">Playlists</Link></li>
         </ul>
         <ul>
           <li>Song 1</li>
@@ -20,7 +21,7 @@ const Sidebar = () => {
         </ul>
       </div>
     </div>
-  );
+ );
 };
 
 export default Sidebar;
