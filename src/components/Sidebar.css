@@ -23,7 +23,7 @@
 .sidebar img {
   width: 100%;
   height: auto;
-  margin-top: 0px;
+  margin-top: -20px;
 }
 .sidebar-logo {
   width: 50px;
@@ -31,7 +31,6 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
-
 .sidebar-list-container {
   flex: 1;
   display: flex;

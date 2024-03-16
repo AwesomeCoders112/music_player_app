@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import HomePage from './components/Home';
 import SearchPage from './components/Search';
-import back from './Back.jpg';
+import back from './Back.jpg'
 
 function App() {
  return (
@@ -17,9 +17,6 @@ function App() {
               <div className='mycls' style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'yellow' }}>
                 <h1 style={{ fontSize: '4.5em' }}>Welcome to Music Player</h1>
                 <ul style={{ listStyleType: 'none', padding: 0 }}>
-                  <li>Song 1</li>
-                  <li>Song 2</li>
-                  <li>Song 3</li>
                 </ul>
               </div>
             </div>
