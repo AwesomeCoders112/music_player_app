@@ -8,14 +8,16 @@ const Sidebar = () => {
     <div className="sidebar">
       <img src={unnamed} alt="Logo" className="sidebar-logo" />
       <div className="sidebar-list-container">
-        <ul>
+        <ul style={{ listStyleType: 'none', padding: 0 }}>
+          <h3> Browse </h3>
         <li><Link to="/">Return to Music Player</Link></li>
           <li><Link to="Home.jsx/">Home</Link></li> {/* Use Link for navigation */}
           <li><Link to="Search.jsx/">Search</Link></li>
           <li><Link to="Your_libraries/">Your Libraries</Link></li>
           <li><Link to="Playlists.jsx/">Playlists</Link></li>
         </ul>
-        <ul>
+        <ul style={{ listStyleType: 'none', padding: 0 }}>
+          <h3> Your Favourite Playlist </h3>
           <li><Link to="Playlist1.jsx/">Playlist 1</Link></li>
           <li><Link to="Playlist2.jsx/">Playlist 2</Link></li>
           <li><Link to="Playlist3.jsx/">Playlist 3</Link></li>
