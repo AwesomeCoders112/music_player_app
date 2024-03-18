@@ -1,0 +1,50 @@
+[33mcommit 5ef5e430e591ad1cd1bf9a2012f4506a8c8619c0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Mon Mar 18 05:42:17 2024 +0530
+
+    Add Code
+
+[33mcommit 6223b5afccafde669aaf80384dc3ca210c0f8094[m
+Merge: 9b30b1b 77ea91e
+Author: Ankith_hebbar <112357382+awesomecode-beep@users.noreply.github.com>
+Date:   Sat Mar 16 22:06:54 2024 +0530
+
+    Merge pull request #1 from AwesomeCoders112/main
+    
+    git repo
+
+[33mcommit 77ea91e9599c21e35b1bfbca093c897dc6ce8214[m
+Author: Vinay Kamath <nnm22ad063@nmamit.in>
+Date:   Sat Mar 16 14:49:56 2024 +0530
+
+    git repo
+
+[33mcommit 9b30b1bf291cbc37249ec6c66c1eb4308e7cbc05[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Mon Mar 11 21:40:35 2024 +0530
+
+    Add Image2
+
+[33mcommit 81ef685a85401fa194cbf8552504b6048a45d5b5[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Mon Mar 11 05:59:05 2024 +0530
+
+    Add Image
+
+[33mcommit dd80d7d3d30698b5c01812cb3954a25696292c25[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Sun Mar 10 22:33:04 2024 +0530
+
+    Add Modifi
+
+[33mcommit 1f51f8b7489b85b2179f27598dc9903fe9468495[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Thu Mar 7 05:50:08 2024 +0530
+
+    MUSIC PLAYER
+
+[33mcommit 05ea288935066f3f2e005bab6fa5c88fbe621ea2[m
+Author: awesomecode <ankithh354@gmail.com>
+Date:   Wed Mar 6 22:11:37 2024 +0530
+
+    Initialize project using Create React App
