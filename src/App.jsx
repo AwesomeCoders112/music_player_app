@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import HomePage from './components/Home';
-import SearchPage from './components/Search';
+import Home from './components/Home';
+import Search from './components/Search';
 import back from './Back.jpg'
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
               </div>
             </div>
           } />
-          <Route path="/home" element={<HomePage />} />
-          <Route path="/search" element={<SearchPage />} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/search" element={<Search/>} />
         </Routes>
       </div>
     </Router>
