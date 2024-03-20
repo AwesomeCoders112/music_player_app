@@ -24,6 +24,7 @@ const PlaylistHeader = styled.div`
     color: #fff;
     font-size: 24px;
     margin: 0;
+    margin-top: 100;
   }
 
   p {
@@ -63,7 +64,7 @@ const Playlist = () => {
           <h2>Heartbreak Hits | Saddest Songs Ever</h2>
           <p>Listen to the latest and best of heartbreak tracks! Follow Now!</p>
         </div>
-        <div>
+        <div className='mycls'>
           <h2> All </h2>
           <h2> Music </h2>
           <h2> Podcasts </h2>

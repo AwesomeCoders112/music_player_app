@@ -51,17 +51,18 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: black;
-  gap: 2rem;
+  gap: 4rem;
+  height: 7.5vh;
   svg {
     color: #b3b3b3;
     transition: 0.2s ease-in-out;
     &:hover {
-      color: black;
+      color: white;
     }
   }
   .state {
     svg {
-      color: black;
+      color: white;
     }
   }
   .previous,
