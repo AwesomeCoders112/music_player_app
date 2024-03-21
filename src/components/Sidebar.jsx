@@ -11,8 +11,7 @@ const Sidebar = () => {
       <div className="sidebar-list-container">
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <h3 style={{marginLeft: 10}}> Browse </h3>
-          <li><Link to="/"style={{ color: 'white', textDecoration: 'none' }}> <FaListUl /> Welcome</Link></li>
-          <li><Link to="/home" style={{ color: 'white', textDecoration: 'none' }}><FaHome /> Home</Link></li> {/* Use Link for navigation */}
+          <li><Link to="/"style={{ color: 'white', textDecoration: 'none' }}> <FaHome/> Home</Link></li>
           <li><Link to="/search" style={{ color: 'white', textDecoration: 'none' }}><FaSearch /> Search</Link></li>
           <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Playlists</Link></li>
         </ul>

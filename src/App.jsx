@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import Home from './components/Home';
 import Search from './components/Search';
 import back from './Back.jpg'
 import PlayerControls from './components/Control';
@@ -22,6 +21,7 @@ function App() {
 
               <div className='mycls' style={{ position: 'absolute', top: '40%', left: '45%', transform: 'translate(-50%, -50%)', textAlign: 'center', color: 'yellow' }}>
                 <h1 style={{ fontSize: '4.5em' }}>Welcome to Music Player</h1>
+                <br></br>
                 <h1 style={{ fontSize: '2.5em' }}>Your one stop Destination to all music</h1>
                 <ul style={{ listStyleType: 'none', padding: 0 }}></ul>
               </div>
@@ -31,7 +31,6 @@ function App() {
               </div>
             </div>
           } />
-          <Route path="/home" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/Playlists" element={<Playlist/>}/>
           <Route path="/Playlist1" element={<Playlist1/>}/>
