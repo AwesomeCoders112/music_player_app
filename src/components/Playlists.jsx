@@ -1,7 +1,10 @@
 import React from 'react'
 
+
 export default function Playlists() {
   return (
-    <div>playlist</div>
+    <div>
+      
+    </div>
   )
 }
