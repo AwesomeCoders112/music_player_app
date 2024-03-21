@@ -13,9 +13,6 @@
   z-index: 1;
 }
 
-.sidebar:hover {
-  width: 300px;
-}
 
 .sidebar li {
   padding: 15px 20px;

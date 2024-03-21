@@ -10,9 +10,10 @@ const Sidebar = () => {
       <img src={unnamed} alt="Logo" className="sidebar-logo" />
       <div className="sidebar-list-container">
         <ul style={{ listStyleType: 'none', padding: 0 }}>
-          <h3 style={{marginLeft: 10}}> Browse </h3>
           <li><Link to="/"style={{ color: 'white', textDecoration: 'none' }}> <FaHome/> Home</Link></li>
+          <br></br>
           <li><Link to="/search" style={{ color: 'white', textDecoration: 'none' }}><FaSearch /> Search</Link></li>
+          <br></br>
           <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Playlists</Link></li>
         </ul>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
