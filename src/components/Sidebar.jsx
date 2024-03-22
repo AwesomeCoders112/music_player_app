@@ -10,7 +10,7 @@ const Sidebar = () => {
       <img src={unnamed} alt="Logo" className="sidebar-logo" />
       <div className="sidebar-list-container">
         <ul style={{ listStyleType: 'none', padding: 0 }}>
-          <li><Link to="/"style={{ color: 'white', textDecoration: 'none' }}> <FaHome/> Home</Link></li>
+          <li><Link to="/home"style={{ color: 'white', textDecoration: 'none' }}> <FaHome/> Home</Link></li>
           <br></br>
           <li><Link to="/search" style={{ color: 'white', textDecoration: 'none' }}><FaSearch /> Search</Link></li>
           <br></br>

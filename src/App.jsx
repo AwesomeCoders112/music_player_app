@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Search from './components/Search';
@@ -7,22 +7,35 @@ import Playlist from './components/Playlists';
 import Playlist1 from './components/Playlist1';
 import Playlist2 from './components/Playlist2';
 import Header from './components/Header';
-import Home from './components/Home'; // Import the Home component
+import Home from './components/Home';
+import AuthForm from './components/AuthForm';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
     <Router>
       <div className="App">
-        <Header />
-        <Sidebar />
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Use the Home component */}
-          <Route path="/search" element={<Search />} />
-          <Route path="/Playlists" element={<Playlist />} />
-          <Route path="/Playlist1" element={<Playlist1 />} />
-          <Route path="/Playlist2" element={<Playlist2 />} />
-        </Routes>
-        <PlayerControls />
+        {!isAuthenticated ? (
+          <AuthForm onLogin={handleLogin} />
+        ) : (
+          <>
+            <Header />
+            <Sidebar />
+            <Routes>
+              <Route path="/home" element={<Home />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="/Playlists" element={<Playlist />} />
+              <Route path="/Playlist1" element={<Playlist1 />} />
+              <Route path="/Playlist2" element={<Playlist2 />} />
+            </Routes>
+            <PlayerControls />
+          </>
+        )}
       </div>
     </Router>
   );
