@@ -1,50 +1,24 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsShuffle } from "react-icons/bs";
 import { CgPlayTrackNext, CgPlayTrackPrev } from "react-icons/cg";
 import { FiRepeat } from "react-icons/fi";
 
-const songs = [
-  { id: 1, title: "Song 1", src: "./music1.mp3" },
-  { id: 2, title: "Song 2", src: "./music2.mp3" },
-  { id: 3, title: "Song 3", src: "./music3..mp3" },
-  // Add more songs as needed
-];
-
 export default function PlayerControls() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const audioRef = useRef(new Audio());
 
   const togglePlayPause = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play().catch(error => console.error('Error playing audio:', error));
-    }
     setIsPlaying(!isPlaying);
   };
 
   const handlePrevTrack = () => {
-    const newIndex = (currentTrackIndex - 1 + songs.length) % songs.length;
-    setCurrentTrackIndex(newIndex);
-    playTrack(newIndex);
+    // Handle previous track logic here
+    console.log("Previous track");
   };
 
   const handleNextTrack = () => {
-    const newIndex = (currentTrackIndex + 1) % songs.length;
-    setCurrentTrackIndex(newIndex);
-    playTrack(newIndex);
-  };
-
-  const playTrack = (index) => {
-    try {
-      audioRef.current.src = songs[index].src;
-      audioRef.current.play().catch(error => console.error('Error playing audio:', error));
-      setIsPlaying(true);
-    } catch (error) {
-      console.error('Error playing track:', error);
-    }
+    // Handle next track logic here
+    console.log("Next track");
   };
 
   return (
@@ -68,7 +42,6 @@ export default function PlayerControls() {
       <div className="repeat">
         <FiRepeat />
       </div>
-      <audio ref={audioRef} />
     </Container>
   );
 }
