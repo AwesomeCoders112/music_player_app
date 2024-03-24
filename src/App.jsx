@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Search from './components/Search';
-<<<<<<< HEAD
 import back from './Back.jpg'
-=======
->>>>>>> 733ae53df49b0be979787e00e9285112e8edafd7
+
 import PlayerControls from './components/Control';
 import Playlist from './components/Playlists';
 import Playlist1 from './components/Playlist1';
