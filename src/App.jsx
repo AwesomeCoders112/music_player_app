@@ -8,7 +8,7 @@ import Playlist1 from './components/Playlist1';
 import Playlist2 from './components/Playlist2';
 import Header from './components/Header';
 import Home from './components/Home';
-import AuthForm from './components/AuthForm';
+import AuthForm from './components/AuthForm/AuthForm';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
