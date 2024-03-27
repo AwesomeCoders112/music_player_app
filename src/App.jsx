@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Search from './components/Search';
+import back from './Back.jpg'
+
 import PlayerControls from './components/Control';
 import Playlist from './components/Playlists';
 import Playlist1 from './components/Playlist1';
