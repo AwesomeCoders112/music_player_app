@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsShuffle } from "react-icons/bs";
+import {
+  BsFillPlayCircleFill,
+  BsFillPauseCircleFill,
+  BsShuffle,
+} from "react-icons/bs";
 import { CgPlayTrackNext, CgPlayTrackPrev } from "react-icons/cg";
 import { FiRepeat } from "react-icons/fi";
 
@@ -42,6 +46,8 @@ export default function PlayerControls() {
       <div className="repeat">
         <FiRepeat />
       </div>
+      {/* Audio element */}
+      <audio src="../music1.mp3" autoPlay={isPlaying} />
     </Container>
   );
 }
