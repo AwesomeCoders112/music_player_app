@@ -14,7 +14,7 @@ const Sidebar = () => {
           <br></br>
           <li><Link to="/search" style={{ color: 'white', textDecoration: 'none' }}><FaSearch /> Search</Link></li>
           <br></br>
-          <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Playlists</Link></li>
+          <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Your Library</Link></li>
         </ul>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <h3 style={{marginLeft: 10}} > Your Favourite Playlist </h3>

@@ -7,20 +7,23 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f2f2f2;
+  background-image: url('https://png.pngtree.com/background/20230617/original/pngtree-spotify-with-empty-space-a-3d-rendering-picture-image_3699554.jpg');
+  background-size: cover;
+  background-position: center;
 `;
 
 const FormContainer = styled.div`
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9); /* Add opacity to make the form container slightly transparent */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 400px;
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg')
 `;
 
 const Title = styled.h1`
   text-align: center;
-  color: #333333;
+  color: yellow;
   margin-bottom: 2rem;
 `;
 
@@ -53,9 +56,10 @@ const Button = styled.button`
 const SwitchText = styled.p`
   text-align: center;
   margin-top: 1rem;
+  color: yellow;
 
   & a {
-    color: #4caf50;
+    color: yellow;
     text-decoration: none;
     font-weight: bold;
 

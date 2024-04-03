@@ -7,6 +7,8 @@ const SearchBarContainer = styled.div`
   align-items: center;
   margin-bottom: 20px;
   height: 83vh;
+  background-image: url('https://wallpapers.com/images/hd/green-and-black-background-6o7fi4exq0rbsvtw.jpg');
+
 `;
 
 const SearchInput = styled.input`
@@ -19,6 +21,7 @@ const SearchInput = styled.input`
   background-color: #f0f0f0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   outline: none;
+  margin-top: 20px;
 
   &:focus {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
