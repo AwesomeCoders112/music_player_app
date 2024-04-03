@@ -16,6 +16,8 @@ const Container = styled.div`
   align-items: center;
   padding: 20px;
   height: 80vh;
+  background-image: url('https://wallpapers.com/images/hd/green-and-black-background-6o7fi4exq0rbsvtw.jpg');
+  color: white;
 `;
 
 const Button = styled.button`

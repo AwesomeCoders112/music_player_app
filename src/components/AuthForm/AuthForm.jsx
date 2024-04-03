@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import logo from './logo.png'; // Import your logo image
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -12,13 +14,32 @@ const Container = styled.div`
   background-position: center;
 `;
 
+const WelcomeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
+
+const WelcomeText = styled.h1`
+  text-align: center;
+  color: yellow;
+  margin-bottom: 1rem;
+`;
+
+const Logo = styled.img`
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+`;
+
 const FormContainer = styled.div`
-  background-color: rgba(255, 255, 255, 0.9); /* Add opacity to make the form container slightly transparent */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 400px;
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg')
+  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
 `;
 
 const Title = styled.h1`
@@ -105,6 +126,10 @@ const AuthForm = ({ onLogin }) => {
 
   return (
     <Container>
+      <WelcomeContainer>
+        <Logo src={logo} alt="Music App Logo" />
+        <WelcomeText> musicX app!</WelcomeText>
+      </WelcomeContainer>
       <FormContainer>
         <Title>{isSignUp ? 'Sign Up for a New Account' : 'Sign In to Your Account'}</Title>
         <Form onSubmit={handleSubmit}>

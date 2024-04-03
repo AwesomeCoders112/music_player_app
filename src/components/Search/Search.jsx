@@ -2,18 +2,19 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const SearchBarContainer = styled.div`
+  background-image: url('https://wallpapers.com/images/hd/green-and-black-background-6o7fi4exq0rbsvtw.jpg');
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
-  height: 83vh;
-  background-image: url('https://wallpapers.com/images/hd/green-and-black-background-6o7fi4exq0rbsvtw.jpg');
+  margin-bottom: 0px;
+  height: 85vh;
+  
 
 `;
 
 const SearchInput = styled.input`
   width: 400px;
-  height: 40px;
+  height: 39px;
   padding: 10px;
   font-size: 16px;
   border: none;
