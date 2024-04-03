@@ -1,17 +1,17 @@
 import React from 'react';
 import './playlist.css';
-import track0image from '../components/images/playlist1-cover.jpg';
-import track1image from '../components/images/purple-haze.jpeg';
-import track2image from '../components/images/moonage-daydream.jpg';
-import track3image from '../components/images/gimme-shelter.jpg';
-import track4image from '../components/images/back-in-black.jpg';
-import track5image from '../components/images/Black_Sabbath_-_Paranoid.jpg';
-import track6image from '../components/images/enter-sandman.jpg';
-import track7image from '../components/images/Born_to-be_wild-steppenwolf-45.jpg';
-import track8image from '../components/images/kashmir.jpeg';
-import track9image from '../components/images/adam-cain.jpg';
-import track10image from '../components/images/fortunate-son.jpg';
-import track11image from '../components/images/roxanne.jpeg';
+import track0image from './images/playlist1-cover.jpg';
+import track1image from './images/purple-haze.jpeg';
+import track2image from './images/moonage-daydream.jpg';
+import track3image from './images/gimme-shelter.jpg';
+import track4image from './images/back-in-black.jpg';
+import track5image from './images/Black_Sabbath_-_Paranoid.jpg';
+import track6image from './images/enter-sandman.jpg';
+import track7image from './images/Born_to-be_wild-steppenwolf-45.jpg';
+import track8image from './images/kashmir.jpeg';
+import track9image from './images/adam-cain.jpg';
+import track10image from './images/fortunate-son.jpg';
+import track11image from './images/roxanne.jpeg';
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import back from '../back.jpg';
+import back from './back.jpg';
 
 const Home = () => {
   const artists = [

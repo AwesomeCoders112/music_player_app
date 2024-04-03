@@ -1,16 +1,16 @@
 import React from 'react'
-import track0image from '../components/images/playlist1-cover.jpg';
-import track1image from '../components/images/sicko-mode.jpg';
-import track2image from '../components/images/family-ties.jpg';
-import track3image from '../components/images/mylife.jpg';
-import track4image from '../components/images/humble.jpg';
-import track5image from '../components/images/father-stretch.jpg';
-import track6image from '../components/images/godzilla.jpg';
-import track7image from '../components/images/mask-off.jpg';
-import track8image from '../components/images/HOTEL-LOBBY.jpg';
-import track9image from '../components/images/dreaming.jpg';
-import track10image from '../components/images/surround-sound.jpg';
-import track11image from '../components/images/money-trees.jpg';
+import track0image from './images/playlist1-cover.jpg';
+import track1image from './images/sicko-mode.jpg';
+import track2image from './images/family-ties.jpg';
+import track3image from './images/mylife.jpg';
+import track4image from './images/humble.jpg';
+import track5image from './images/father-stretch.jpg';
+import track6image from './images/godzilla.jpg';
+import track7image from './images/mask-off.jpg';
+import track8image from './images/HOTEL-LOBBY.jpg';
+import track9image from './images/dreaming.jpg';
+import track10image from './images/surround-sound.jpg';
+import track11image from './images/money-trees.jpg';
 
 
 
