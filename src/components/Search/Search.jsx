@@ -13,7 +13,7 @@ const SearchBarContainer = styled.div`
 `;
 
 const SearchInput = styled.input`
-  width: 400px;
+  width: 800px;
   height: 39px;
   padding: 10px;
   font-size: 16px;
@@ -30,7 +30,7 @@ const SearchInput = styled.input`
 `;
 
 const RecentSearchesContainer = styled.div`
-  width: 400px;
+  width: 800px;
   margin-top: 10px;
   background-color: #fff;
   border-radius: 8px;
