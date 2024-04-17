@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import './playlist1.css';
 import track0image from './images/playlist1-cover.jpg';
 import track1 from './songs/purplehaze.mp3';
 import track1image from './images/purple-haze.jpeg';
@@ -23,6 +22,7 @@ import track10 from './songs/fortunateson.mp3';
 import track10image from './images/fortunate-son.jpg';
 import track11 from './songs/roxanne.mp3';
 import track11image from './images/roxanne.jpeg';
+import './styles/playlist1.css';
 
 // Define function to get track source based on index
 const getTrackSource = (index) => {

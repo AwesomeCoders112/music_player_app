@@ -10,7 +10,7 @@ import Playlist2 from './components/Playlist/Playlist2';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import AuthForm from './components/AuthForm/AuthForm';
-
+import Songs from './components/Song/Music';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
@@ -25,16 +25,16 @@ function App() {
           <AuthForm onLogin={handleLogin} />
         ) : (
           <>
-            <Header />
             <Sidebar />
             <Routes>
               <Route path="/home" element={<Home />} />
               <Route path="/search" element={<Search />} />
+              <Route path='/Songs' element={<Songs />}/>
               <Route path="/Playlists" element={<Playlist />} />
               <Route path="/Playlist1" element={<Playlist1 />} />
               <Route path="/Playlist2" element={<Playlist2 />} />
             </Routes>
-            <PlayerControls />
+            <Header />
           </>
         )}
       </div>

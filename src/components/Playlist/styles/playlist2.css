@@ -1,4 +1,4 @@
-.playlist-page {
+.playlist-page1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +7,7 @@
     background-color: black; 
   }
   
-  .playlist-header {
+  .playlist-header1 {
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -17,31 +17,31 @@
     width: 100%; 
   }
   
-  .playlist-image {
+  .playlist-image1 {
     width: 100px; 
     height: 100px; 
     margin-right: 20px;
   }
   
-  .playlist-header-text {
+  .playlist-header-text1 {
     text-align: center; 
     flex: 1;
   }
   
-  .playlist-title {
+  .playlist-title1 {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
-  .playlist-description {
+  .playlist-description1 {
     font-size: 16px;
     text-align: center;
     max-width: 400px;
   }
   
   
-  .playlist-tracks {
+  .playlist-tracks1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align tracks to the left */
@@ -52,7 +52,7 @@
   }
   
   
-  .track {
+  .track1 {
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -63,13 +63,13 @@
     width: 245%; 
   }
   
-  .track-image {
+  .track-image1 {
     width: 100px; 
     height: 100px;
     margin-right: 20px;
   }
   
-  .track-details {
+  .track-details1 {
     flex: 1;
     margin-right: 20px;
     overflow: hidden; /* Added to prevent overflow */
@@ -77,23 +77,23 @@
     text-overflow: ellipsis; /* Added to show ellipsis for overflowed text */
   }
   
-  .track-name {
+  .track-name1 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  .track-artist {
+  .track-artist1 {
     font-size: 14px;
   }
   
-  .track-controls {
+  .track-controls1 {
     display: flex;
     align-items: center;
   }
   
-  .play-button,
-  .add-button {
+  .play-button1,
+  .add-button1 {
     background-color: #1db954;
     color: white; 
     font-size: 14px;
@@ -104,6 +104,6 @@
     margin-right: 10px;
   }
   
-  .track-runtime {
+  .track-runtime1 {
     margin-left: auto; 
   }

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './playlist2.css';
+import './styles/playlist2.css';
 import track0image from './images/playlist1-cover.jpg';
 import track1 from './songs/SICKOMODE.mp3';
 import track2 from './songs/familyties.mp3';
@@ -112,192 +112,192 @@ const Playlist2 = () => {
   
  
    return (
-    <div className="playlist-page">
-      <div className="playlist-header">
-        <img src={track0image} alt="Playlist Cover" className="playlist-image" />
-        <div className="playlist-header-text">
-          <h1 className="playlist-title">Hip Hop Playlist</h1>
-          <p className="playlist-description">Modern Hip Hop</p>
+    <div className="playlist-page1">
+      <div className="playlist-header1">
+        <img src={track0image} alt="Playlist Cover" className="playlist-image1" />
+        <div className="playlist-header-text1">
+          <h1 className="playlist-title1">Hip Hop Playlist</h1>
+          <p className="playlist-description1">Modern Hip Hop</p>
         </div>
       </div>
 
 
-      <div className="playlist-tracks">
+      <div className="playlist-tracks1">
       {Array.from({ length: 1 }, (_, index) => (
-        <div className="track-container" key={index}>
+        <div className="track-container1" key={index}>
           {/*first track */} 
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3] = el} src={getTrackSource(index * 3)} />
             <img src={getTrackImage(index * 3)} alt={`Track ${index * 3 + 1}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">SICKO MODE</p>
-              <p className="track-artist">Travid Scott</p>
+            <div className="track-details1">
+              <p className="track-name1">SICKO MODE</p>
+              <p className="track-artist1">Travid Scott</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3)}>
                 {isPlaying[index * 3] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">5:12</span>
+              <span className="track-runtime1">5:12</span>
             </div>
           </div>
 
           {/* S\second track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 1] = el} src={getTrackSource(index * 3 + 1)} />
-            <img src={getTrackImage(index * 3 + 1)} alt={`Track ${index * 3 + 2}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Family Ties</p>
-              <p className="track-artist">Kendrick Lamar</p>
+            <img src={getTrackImage(index * 3 + 1)} alt={`Track ${index * 3 + 2}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Family Ties</p>
+              <p className="track-artist1">Kendrick Lamar</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 1)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 1)}>
                 {isPlaying[index * 3 + 1] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">4:12</span>
+              <span className="track-runtime1">4:12</span>
             </div>
           </div>
 
           {/* third track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 2] = el} src={getTrackSource(index * 3 + 2)} />
-            <img src={getTrackImage(index * 3 + 2)} alt={`Track ${index * 3 + 3}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">m y . l i f e</p>
-              <p className="track-artist">J. Cole</p>
+            <img src={getTrackImage(index * 3 + 2)} alt={`Track ${index * 3 + 3}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">m y . l i f e</p>
+              <p className="track-artist1">J. Cole</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 2)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 2)}>
                 {isPlaying[index * 3 + 2] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">3:38</span>
+              <span className="track-runtime1">3:38</span>
             </div>
           </div>
 
           {/* fourth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 3] = el} src={getTrackSource(index * 3 + 3)} />
-            <img src={getTrackImage(index * 3 + 3)} alt={`Track ${index * 3 + 4}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">HUMBLE.</p>
-              <p className="track-artist">Kendrick Lamar</p>
+            <img src={getTrackImage(index * 3 + 3)} alt={`Track ${index * 3 + 4}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">HUMBLE.</p>
+              <p className="track-artist1">Kendrick Lamar</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 3)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 3)}>
                 {isPlaying[index * 3 + 3] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">2:57</span>
+              <span className="track-runtime1">2:57</span>
             </div>
           </div>
 
           {/* fifth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 4] = el} src={getTrackSource(index * 3 + 4)} />
-            <img src={getTrackImage(index * 3 + 4)} alt={`Track ${index * 3 + 5}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Father Stretch My Hands Pt. 1</p>
-              <p className="track-artist">Kanye West</p>
+            <img src={getTrackImage(index * 3 + 4)} alt={`Track ${index * 3 + 5}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Father Stretch My Hands Pt. 1</p>
+              <p className="track-artist1">Kanye West</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 4)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 4)}>
                 {isPlaying[index * 3 + 4] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">2:15</span>
+              <span className="track-runtime1">2:15</span>
             </div>
           </div>
 
           {/* sixth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 5] = el} src={getTrackSource(index * 3 + 5)} />
-            <img src={getTrackImage(index * 3 + 5)} alt={`Track ${index * 3 + 6}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Godzilla</p>
-              <p className="track-artist">Eminem</p>
+            <img src={getTrackImage(index * 3 + 5)} alt={`Track ${index * 3 + 6}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Godzilla</p>
+              <p className="track-artist1">Eminem</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 5)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 5)}>
                 {isPlaying[index * 3 + 5] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">3:30</span>
+              <span className="track-runtime1">3:30</span>
             </div>
           </div>
 
           {/* seventh track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 6] = el} src={getTrackSource(index * 3 + 6)} />
-            <img src={getTrackImage(index * 3 + 6)} alt={`Track ${index * 3 + 7}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Mask Off</p>
-              <p className="track-artist">Future</p>
+            <img src={getTrackImage(index * 3 + 6)} alt={`Track ${index * 3 + 7}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name11">Mask Off</p>
+              <p className="track-artist1">Future</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 6)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 6)}>
                 {isPlaying[index * 3 + 6] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">3:24</span>
+              <span className="track-runtime1">3:24</span>
             </div>
           </div>
 
           {/* eighth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 7] = el} src={getTrackSource(index * 3 + 7)} />
-            <img src={getTrackImage(index * 3 + 7)} alt={`Track ${index * 3 + 8}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">HOTEL LOBBY</p>
-              <p className="track-artist">Quavo, Takeoff</p>
+            <img src={getTrackImage(index * 3 + 7)} alt={`Track ${index * 3 + 8}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">HOTEL LOBBY</p>
+              <p className="track-artist1">Quavo, Takeoff</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 7)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 7)}>
                 {isPlaying[index * 3 + 7] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">2:22</span>
+              <span className="track-runtime1">2:22</span>
             </div>
           </div>
 
           {/* ninth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 8] = el} src={getTrackSource(index * 3 + 8)} />
-            <img src={getTrackImage(index * 3 + 8)} alt={`Track ${index * 3 + 9}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Am i Dreaming</p>
-              <p className="track-artist">Metro Boomin</p>
+            <img src={getTrackImage(index * 3 + 8)} alt={`Track ${index * 3 + 9}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Am i Dreaming</p>
+              <p className="track-artist1">Metro Boomin</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 8)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 8)}>
                 {isPlaying[index * 3 + 8] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">4:16</span>
+              <span className="track-runtime1">4:16</span>
             </div>
           </div>
 
           {/* tenth track */}
-          <div className="track" key={index}>
+          <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 9] = el} src={getTrackSource(index * 3 + 9)} />
-            <img src={getTrackImage(index * 3 + 9)} alt={`Track ${index * 3 + 10}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Surround Sound</p>
-              <p className="track-artist">JID</p>
+            <img src={getTrackImage(index * 3 + 9)} alt={`Track ${index * 3 + 10}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Surround Sound</p>
+              <p className="track-artist1">JID</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 9)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 9)}>
                 {isPlaying[index * 3 + 9] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">3:49</span>
+              <span className="track-runtime1">3:49</span>
             </div>
           </div>
 
            {/* eleventh track */}
-           <div className="track" key={index}>
+           <div className="track1" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 10] = el} src={getTrackSource(index * 3 + 10)} />
-            <img src={getTrackImage(index * 3 + 10)} alt={`Track ${index * 3 + 11}`} className="track-image" />
-            <div className="track-details">
-              <p className="track-name">Money Trees</p>
-              <p className="track-artist">Kendrick Lamar</p>
+            <img src={getTrackImage(index * 3 + 10)} alt={`Track ${index * 3 + 11}`} className="track-image1" />
+            <div className="track-details1">
+              <p className="track-name1">Money Trees</p>
+              <p className="track-artist1">Kendrick Lamar</p>
             </div>
-            <div className="track-controls">
-              <button className="play-button" onClick={() => togglePlay(index * 3 + 10)}>
+            <div className="track-controls1">
+              <button className="play-button1" onClick={() => togglePlay(index * 3 + 10)}>
                 {isPlaying[index * 3 + 10] ? 'Pause' : 'Play'}
               </button>
-              <span className="track-runtime">6:26</span>
+              <span className="track-runtime1">6:26</span>
             </div>
           </div>
         </div>

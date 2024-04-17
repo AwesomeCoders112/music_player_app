@@ -15,7 +15,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  height: 80vh;
+  height: 86.5vh;
   background-image: url('https://wallpapers.com/images/hd/green-and-black-background-6o7fi4exq0rbsvtw.jpg');
   color: white;
 `;
@@ -27,6 +27,7 @@ const Button = styled.button`
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 850px;
 `;
 
 const Modal = styled.div`
@@ -47,6 +48,7 @@ const ModalContent = styled.div`
   border: 1px solid #888;
   width: 30%;
   position: relative;
+  color: black;
 `;
 
 const CloseButton = styled.span`
@@ -62,6 +64,7 @@ const PlaylistContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  
 `;
 
 const PlaylistItem = styled.div`

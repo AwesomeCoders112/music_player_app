@@ -7,7 +7,7 @@ const SearchBarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 0px;
-  height: 85vh;
+  height: 92vh;
   
 
 `;

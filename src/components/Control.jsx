@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {
-  BsFillPlayCircleFill,
-  BsFillPauseCircleFill,
-  BsShuffle,
-} from "react-icons/bs";
+import { BsFillPlayCircleFill, BsFillPauseCircleFill, BsShuffle } from "react-icons/bs";
 import { CgPlayTrackNext, CgPlayTrackPrev } from "react-icons/cg";
 import { FiRepeat } from "react-icons/fi";
 
@@ -35,9 +31,9 @@ export default function PlayerControls() {
       </div>
       <div className="state">
         {isPlaying ? (
-          <BsFillPauseCircleFill onClick={togglePlayPause} />
+          <BsFillPauseCircleFill /> // Removed onClick event handler
         ) : (
-          <BsFillPlayCircleFill onClick={togglePlayPause} />
+          <BsFillPlayCircleFill /> // Removed onClick event handler
         )}
       </div>
       <div className="next">
@@ -59,6 +55,7 @@ const Container = styled.div`
   background-color: black;
   gap: 4rem;
   height: 7.5vh;
+
   svg {
     color: #b3b3b3;
     transition: 0.2s ease-in-out;
@@ -66,11 +63,13 @@ const Container = styled.div`
       color: white;
     }
   }
+
   .state {
     svg {
       color: white;
     }
   }
+
   .previous,
   .next,
   .state {

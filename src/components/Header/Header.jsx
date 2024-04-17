@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header style={{ backgroundColor: 'black', color: 'green', height: '8vh', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 2rem' }}>
+    <header style={{ backgroundColor: 'black', color: 'green', height: '8.5vh', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 2rem' }}>
       <div>
         <Link to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '1.5rem' }}>
           Music Player
@@ -15,7 +15,7 @@ const Header = () => {
         
           <li style={{ marginRight: '52rem' }}>
             <Link style={{ textDecoration: 'none', color: 'white', }}>
-              About Us
+             
             </Link>
           </li>
         </ul>
