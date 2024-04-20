@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/SideBar/Sidebar';
 import Search from './components/Search/Search';
 
-import PlayerControls from './components/Control';
+
 import Playlist from './components/Library/Playlists';
 import Playlist1 from './components/Playlist/Playlist1';
 import Playlist2 from './components/Playlist/Playlist2';
-import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header'
 import Home from './components/Home/Home';
 import AuthForm from './components/AuthForm/AuthForm';
 import Songs from './components/Song/Music';
@@ -34,7 +35,7 @@ function App() {
               <Route path="/Playlist1" element={<Playlist1 />} />
               <Route path="/Playlist2" element={<Playlist2 />} />
             </Routes>
-            <Header />
+            <Footer/>
           </>
         )}
       </div>

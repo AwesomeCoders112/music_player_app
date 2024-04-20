@@ -125,7 +125,7 @@ const Playlist1 = () => {
       {Array.from({ length: 1 }, (_, index) => (
         <div className="track-container" key={index}>
           {/*first track */} 
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3] = el} src={getTrackSource(index * 3)} />
             <img src={getTrackImage(index * 3)} alt={`Track ${index * 3 + 1}`} className="track-image" />
             <div className="track-details">
@@ -141,7 +141,7 @@ const Playlist1 = () => {
           </div>
 
           {/* S\second track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 1] = el} src={getTrackSource(index * 3 + 1)} />
             <img src={getTrackImage(index * 3 + 1)} alt={`Track ${index * 3 + 2}`} className="track-image" />
             <div className="track-details">
@@ -157,7 +157,7 @@ const Playlist1 = () => {
           </div>
 
           {/* third track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 2] = el} src={getTrackSource(index * 3 + 2)} />
             <img src={getTrackImage(index * 3 + 2)} alt={`Track ${index * 3 + 3}`} className="track-image" />
             <div className="track-details">
@@ -173,7 +173,7 @@ const Playlist1 = () => {
           </div>
 
           {/* fourth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 3] = el} src={getTrackSource(index * 3 + 3)} />
             <img src={getTrackImage(index * 3 + 3)} alt={`Track ${index * 3 + 4}`} className="track-image" />
             <div className="track-details">
@@ -189,7 +189,7 @@ const Playlist1 = () => {
           </div>
 
           {/* fifth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 4] = el} src={getTrackSource(index * 3 + 4)} />
             <img src={getTrackImage(index * 3 + 4)} alt={`Track ${index * 3 + 5}`} className="track-image" />
             <div className="track-details">
@@ -205,7 +205,7 @@ const Playlist1 = () => {
           </div>
 
           {/* sixth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 5] = el} src={getTrackSource(index * 3 + 5)} />
             <img src={getTrackImage(index * 3 + 5)} alt={`Track ${index * 3 + 6}`} className="track-image" />
             <div className="track-details">
@@ -221,7 +221,7 @@ const Playlist1 = () => {
           </div>
 
           {/* seventh track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 6] = el} src={getTrackSource(index * 3 + 6)} />
             <img src={getTrackImage(index * 3 + 6)} alt={`Track ${index * 3 + 7}`} className="track-image" />
             <div className="track-details">
@@ -237,7 +237,7 @@ const Playlist1 = () => {
           </div>
 
           {/* eighth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 7] = el} src={getTrackSource(index * 3 + 7)} />
             <img src={getTrackImage(index * 3 + 7)} alt={`Track ${index * 3 + 8}`} className="track-image" />
             <div className="track-details">
@@ -253,7 +253,7 @@ const Playlist1 = () => {
           </div>
 
           {/* ninth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 8] = el} src={getTrackSource(index * 3 + 8)} />
             <img src={getTrackImage(index * 3 + 8)} alt={`Track ${index * 3 + 9}`} className="track-image" />
             <div className="track-details">
@@ -269,7 +269,7 @@ const Playlist1 = () => {
           </div>
 
           {/* tenth track */}
-          <div className="track" key={index}>
+          <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 9] = el} src={getTrackSource(index * 3 + 9)} />
             <img src={getTrackImage(index * 3 + 9)} alt={`Track ${index * 3 + 10}`} className="track-image" />
             <div className="track-details">
@@ -285,7 +285,7 @@ const Playlist1 = () => {
           </div>
 
            {/* eleventh track */}
-           <div className="track" key={index}>
+           <div className="track2" key={index}>
             <audio ref={el => audioRefs.current[index * 3 + 10] = el} src={getTrackSource(index * 3 + 10)} />
             <img src={getTrackImage(index * 3 + 10)} alt={`Track ${index * 3 + 11}`} className="track-image" />
             <div className="track-details">
