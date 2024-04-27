@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from './logo.png'; // Import your logo image
+import logo from './logo.png';
+import { MDBFooter } from 'mdb-react-ui-kit';
 
 const Container = styled.div`
   display: flex;
@@ -182,6 +183,14 @@ const AuthForm = ({ onLogin }) => {
           </a>
         </SwitchText>
       </FormContainer>
+      <MDBFooter bgColor='dark' className='text-center text-lg-left' style={{ height: '100px' }}>
+  <div className='text-center p-3' style={{ backgroundColor: '#3EA85C',fontSize: '1.3rem', }}>
+    &copy; {new Date().getFullYear()} Copyright:{' '}
+    <a className='text-light' href='https://nmamit.nitte.edu.in/'>
+      TeamAwesome Coders
+    </a>
+  </div>
+</MDBFooter>
     </Container>
   );
 };

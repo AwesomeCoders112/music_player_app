@@ -13,8 +13,6 @@ const Sidebar = () => {
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li><Link to="/home"style={{ color: 'white', textDecoration: 'none' }}> <FaHome/> Home</Link></li>
           <br></br>
-          <li><Link to="/search" style={{ color: 'white', textDecoration: 'none' }}><FaSearch /> Search</Link></li>
-          <br></br>
           <li><Link to="/Songs" style={{ color: 'white', textDecoration: 'none' }}><FaSocks /> Songs</Link></li>
           <br></br>
           <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Your Library</Link></li>
