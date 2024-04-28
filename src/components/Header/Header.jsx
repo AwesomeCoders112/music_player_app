@@ -34,6 +34,7 @@ const Header = () => {
           padding: 1rem;
           background-color: black;
           color: #fff;
+          height: 3vh;
         }
 
         .brand a {
