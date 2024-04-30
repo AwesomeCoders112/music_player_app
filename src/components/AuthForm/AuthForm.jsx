@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from './logo.png';
 import { MDBFooter } from 'mdb-react-ui-kit';
+import { GoogleLogin } from '@react-oauth/google';
 
 const Container = styled.div`
   display: flex;
@@ -98,6 +99,18 @@ const AuthForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
+  const responseMessage = (response) => {
+    setUsername('');
+    setPassword('');
+    setEmail('');
+    setConfirmPassword('');
+
+    onLogin();
+    navigate('/home');
+};
+const errorMessage = (error) => {
+    console.log(error);
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -182,6 +195,9 @@ const AuthForm = ({ onLogin }) => {
             {isSignUp ? 'Sign In' : 'Sign Up'}
           </a>
         </SwitchText>
+        <div>
+            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+        </div>
       </FormContainer>
       <MDBFooter bgColor='dark' className='text-center text-lg-left' style={{ height: '100px' }}>
   <div className='text-center p-3' style={{ backgroundColor: '#3EA85C',fontSize: '1.3rem', }}>
