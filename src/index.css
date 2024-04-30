@@ -1,14 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@use "~inter-ui/default" as inter-ui with (
+  $inter-font-path: "~inter-ui/web-latin"
+);
+@include inter-ui.weight-400;
+@include inter-ui.weight-700;
+
+html {
+  font-family: "Inter", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "InterVariable", sans-serif; /* If using the variable font */
+  }
 }

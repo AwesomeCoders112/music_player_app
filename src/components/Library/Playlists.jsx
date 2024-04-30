@@ -296,11 +296,10 @@ const Playlists = () => {
       };
 
   return (
-    <div className="playlist-page">
-      <div className="playlist-header">
-        <img src={track0image} alt="Playlist Cover" className="playlist-image" />
-        <div className="playlist-header-text">
-          <h1 className="playlist-title">CREATE YOUR OWN PLAYLIST</h1>
+    <div className="playlist-page4">
+      <div className="playlist-header4">
+        <div className="playlist-header-text4">
+          <h1 className="playlist-title4">CREATE YOUR OWN PLAYLIST</h1>
         </div>
       </div>
 
@@ -309,25 +308,25 @@ const Playlists = () => {
         type="text"
         placeholder="Search for tracks, artists..."
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="playlist-search"
+        className="playlist-search4"
       />
 
       {/* Display tracks */}
-      <div className="playlist-tracks">
+      <div className="playlist-tracks4">
         {tracksData.map((track, index) => {
           const { trackName, trackArtist, trackRuntime } = track;
 
           return (
             filterTracks(trackName, trackArtist, searchQuery) && (
-              <div className="track" key={index}>
+              <div className="track4" key={index}>
                 <audio ref={(el) => (audioRefs.current[index] = el)} src={getTrackSource(index)} />
-                <img src={getTrackImage(index)} alt={`Track ${index + 1}`} className="track-image" />
-                <div className="track-details">
-                  <p className="track-name">{trackName}</p>
-                  <p className="track-artist">{trackArtist}</p>
+                <img src={getTrackImage(index)} alt={`Track ${index + 1}`} className="track-image4" />
+                <div className="track-details4">
+                  <p className="track-name4">{trackName}</p>
+                  <p className="track-artist4">{trackArtist}</p>
                 </div>
-                <div className="track-controls">
-                  <button className="play-button" onClick={() => togglePlay(index)}>
+                <div className="track-controls4">
+                  <button className="play-button4" onClick={() => togglePlay(index)}>
                     {isPlaying[index] ? 'Pause' : 'Play'}
                   </button>
                   <button
@@ -336,7 +335,7 @@ const Playlists = () => {
                   >
                     {selectedSongs.includes(index) ? 'Deselect' : 'Select'}
                   </button>
-                  <span className="track-runtime">{trackRuntime}</span>
+                  <span className="track-runtime4">{trackRuntime}</span>
                 </div>
               </div>
             )
@@ -346,7 +345,7 @@ const Playlists = () => {
 
       {/* Display selected songs for playlist creation */}
       {selectedSongs.length > 0 && (
-        <div className="playlist-creator">
+        <div className="playlist-creator4">
           <h2>Create Playlist</h2>
           <ul>
             {selectedSongs.map((index) => (

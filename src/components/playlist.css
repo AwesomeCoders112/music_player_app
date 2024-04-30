@@ -7,7 +7,7 @@ body {
   color: #ffffff;
 }
 
-.playlist-page4 {
+.playlist-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,35 +18,35 @@ body {
 }
 
 
-.playlist-header4 {
+.playlist-header {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 40px;
   padding: 20px;
   background-color: #1DB954;
-  width: 100%;
+  width: 200%;
   border-radius: 20px;
 }
 
-.playlist-header-text4 {
+.playlist-header-text {
   text-align: center;
 }
 
-.playlist-title4 {
+.playlist-title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.playlist-description4{
+.playlist-description {
   font-size: 18px;
   max-width: 600px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.playlist-tracks4{
+.playlist-tracks {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -57,52 +57,52 @@ body {
 }
 
 
-.track4 {
+.track {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px;
   background-color: #282828;
-  width: 120%;
+  width: 155%;
   border-radius: 10px;
   transition: background-color 0.3s ease;
 }
 
-.track4:hover {
+.track:hover {
   background-color: #383838;
 }
 
-.track-image4 {
+.track-image {
   width: 100px;
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.track-details4 {
+.track-details {
   flex: 1;
   margin-left: 20px;
 }
 
-.track-name4 {
+.track-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-.track-artist4 {
+.track-artist {
   font-size: 14px;
   color: #b3b3b3;
 }
 
-.track-controls4 {
+.track-controls {
   display: flex;
   align-items: center;
 }
 
-.play-button4,
-.add-button4 {
+.play-button,
+.add-button {
   background-color: #1db954;
   color: white;
   font-size: 14px;
@@ -114,13 +114,13 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.play-button4:hover,
-.add-button3:hover {
+.play-button:hover,
+.add-button:hover {
   background-color: #169c4b;
 }
 
 
-.playlist-search4 {
+.playlist-search {
   width: 350px;
   padding: 15px;
   border: 2px solid #1DB954;
@@ -132,11 +132,11 @@ body {
 }
 
 
-.play-button4::before {
+.play-button::before {
   content: "\25B6";
 }
 
-.add-button4::before {
+.add-button::before {
   content: "+";
 }
 
@@ -150,13 +150,13 @@ body {
   }
 }
 
-.track4 {
+.track {
   animation: fadeIn 0.5s ease-in-out;
 }
 
 
 @media (max-width: 768px) {
-  .playlist-search4 {
+  .playlist-search {
     width: 100%;
     margin-left: 0;
   }

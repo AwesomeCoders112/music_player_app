@@ -181,11 +181,10 @@ const SONGS = () => {
   };
 
   return (
-    <div className="playlist-page">
-      <div className="playlist-header">
-        <img src={track0image} alt="Playlist Cover" className="playlist-image" />
-        <div className="playlist-header-text">
-          <h1 className="playlist-title">SONGS</h1>
+    <div className="playlist-page3">
+      <div className="playlist-header3">
+        <div className="playlist-header-text3">
+          <h1 className="playlist-title3">SONGS</h1>
         </div>
       </div>
 
@@ -195,12 +194,12 @@ const SONGS = () => {
         placeholder="Search for tracks, artists..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        className="playlist-search"
+        className="playlist-search3"
       />
 
-      <div className="playlist-tracks">
+      <div className="playlist-tracks3">
         {Array.from({ length: 1 }, (_, index) => (
-          <div className="track-container" key={index}>
+          <div className="track-container3" key={index}>
             {/* Render each track */}
             {[19, 20, 21, 12, 11, 13, 14, 15, 16, 17, 18, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].map((subIndex) => {
               const trackIndex = index * 11 + subIndex;
@@ -210,18 +209,18 @@ const SONGS = () => {
 
               return (
                 filterTracks(trackName, trackArtist) && (
-                  <div className="track" key={trackIndex}>
+                  <div className="track3" key={trackIndex}>
                     <audio ref={(el) => (audioRefs.current[trackIndex] = el)} src={getTrackSource(trackIndex)} />
-                    <img src={getTrackImage(trackIndex)} alt={`Track ${trackIndex + 1}`} className="track-image" />
-                    <div className="track-details">
-                      <p className="track-name">{trackName}</p>
-                      <p className="track-artist">{trackArtist}</p>
+                    <img src={getTrackImage(trackIndex)} alt={`Track ${trackIndex + 1}`} className="track-image3" />
+                    <div className="track-details3">
+                      <p className="track-name3">{trackName}</p>
+                      <p className="track-artist3">{trackArtist}</p>
                     </div>
-                    <div className="track-controls">
-                      <button className="play-button" onClick={() => togglePlay(trackIndex)}>
+                    <div className="track-controls3">
+                      <button className="play-button3" onClick={() => togglePlay(trackIndex)}>
                         {isPlaying[trackIndex] ? 'Pause' : 'Play'}
                       </button>
-                      <span className="track-runtime">{trackRuntime}</span>
+                      <span className="track-runtime3">{trackRuntime}</span>
                     </div>
                   </div>
                 )

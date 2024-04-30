@@ -17,9 +17,12 @@ const Sidebar = () => {
           <br></br>
           <li><Link to="/playlists" style={{ color: 'white', textDecoration: 'none' }}><FaListUl /> Your Library</Link></li>
         </ul>
+        <br></br>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <h3 style={{marginLeft: 10}} > Our Picks for you </h3>
+          <br></br>
           <li><Link to="/playlist1" style={{ color: 'white', textDecoration: 'none' }}><FaRegHeart /> Rock n Roll</Link></li>
+          <br></br>
           <li><Link to="/playlist2" style={{ color: 'white', textDecoration: 'none' }}><FaRegHeart /> Hip Hop</Link></li>
         </ul>
       </div>
