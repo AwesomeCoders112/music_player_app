@@ -1,37 +1,101 @@
-import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-    <header style={{ backgroundColor: 'black', color: 'green', height: '8.5vh', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 2rem' }}>
-      <div>
-        <Link to="/" style={{ textDecoration: 'none', color: 'white', fontSize: '1.5rem' }}>
-          Music Player
-        </Link>
-      </div>
+    <header>
       <nav>
-        <ul style={{ listStyle: 'none', display: 'flex', alignItems: 'center', justifyContent: 'space-around'}}>
-        
-          <li style={{ marginRight: '52rem' }}>
-            <Link style={{ textDecoration: 'none', color: 'white', }}>
-             
-            </Link>
-          </li>
-        </ul>
+        <div className="brand">
+          <a href="#">MyApp</a>
+        </div>
+        <div className="nav-toggle">
+          <button onClick={toggleNav}>&#9776;</button>
+        </div>
+        <div className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
       </nav>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
-        <h3 style={{ marginRight: '1rem' }}>Follow us on:</h3>
-        <a href="#" style={{ textDecoration: 'none', color: 'white', marginRight: '1rem' }}>
-          <FaFacebookF size={20} />
-        </a>
-        <a href="#" style={{ textDecoration: 'none', color: 'white', marginRight: '1rem' }}>
-          <FaTwitter size={20} />
-        </a>
-        <a href="#" style={{ textDecoration: 'none', color: 'white', marginRight: '1rem' }}>
-          <FaInstagram size={20} />
-        </a>
-      </div>
+
+      <style jsx>{`
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem;
+          background-color: black;
+          color: #fff;
+          height: 3vh;
+        }
+
+        .brand a {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .nav-toggle button {
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .nav-links.open {
+          display: block;
+        }
+
+        .nav-links ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .nav-links li {
+          margin-bottom: 0.5rem;
+        }
+
+        .nav-links a {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        .nav-links a:hover {
+          color: #ccc;
+        }
+
+        @media (min-width: 768px) {
+          .nav-toggle {
+            display: none;
+          }
+
+          .nav-links {
+            display: flex;
+          }
+
+          .nav-links ul {
+            display: flex;
+          }
+
+          .nav-links li {
+            margin-right: 1rem;
+            margin-bottom: 0;
+          }
+        }
+      `}</style>
     </header>
   );
 };
