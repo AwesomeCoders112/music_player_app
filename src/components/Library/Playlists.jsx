@@ -51,112 +51,148 @@ const tracksData = [
     trackName: 'Purple Haze',
     trackArtist: 'Jimi Hendrix',
     trackRuntime: '2:50',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'Moonage Daydream',
     trackArtist: 'David Bowie',
     trackRuntime: '4:39',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
     trackName: 'Gimme Shelter',
     trackArtist: 'The Rolling Stones',
     trackRuntime: '4:30',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
     trackName: 'Back in Black',
     trackArtist: 'AC/DC',
     trackRuntime: '4:15',
-    
-  },
-  {
-    trackName: 'Paranoid',
-    trackArtist: 'Black Sabbath',
-    trackRuntime: '2:46',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'Enter Sandman',
     trackArtist: 'Metallica',
     trackRuntime: '5:31',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
     trackName: 'Born to be Wild',
     trackArtist: 'Steppenwolf',
     trackRuntime: '3:30',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
     trackName: 'Kashmir',
     trackArtist: 'Led Zeppelin',
     trackRuntime: '8:37',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'Adam Raised a Cain',
     trackArtist: 'Bruce Springsteen',
     trackRuntime: '4:32',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
     trackName: 'Fortunate Son',
     trackArtist: 'Creedence Clearwater Revival',
     trackRuntime: '2:20',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
     trackName: 'Roxanne',
     trackArtist: 'The Police',
     trackRuntime: '3:11',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'SICKO MODE',
     trackArtist: 'Travis Scott',
     trackRuntime: '5:12',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
-    trackName: 'family ties',
+    trackName: 'family ties (with Kendrick Lamar)',
     trackArtist: 'Baby Keem, Kendrick Lamar',
     trackRuntime: '4:12',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
-    trackName: 'm y . l i f e',
+    trackName: 'm y . l i f e (with 21 Savage & Morray)',
     trackArtist: 'J. Cole, 21 Savage, Morray',
     trackRuntime: '3:38',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'HUMBLE.',
     trackArtist: 'Kendrick Lamar',
     trackRuntime: '2:57',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
-    trackName: 'Father Stretch My Hnads Pt. 1',
+    trackName: 'Father Stretch My Hands Pt. 1',
     trackArtist: 'Kanye West',
     trackRuntime: '2:15',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
     trackName: 'Godzilla (feat. Juice WRLD)',
     trackArtist: 'Eminem, Juice WRLD',
     trackRuntime: '3:30',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'Mask Off',
     trackArtist: 'Future',
     trackRuntime: '3:24',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
     trackName: 'HOTEL LOBBY (Unc & Phew)',
     trackArtist: 'Quavo, Takeoff',
     trackRuntime: '2:22',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
   {
-    trackName: 'Am I Dreaming (Metro Boomin & A$AP Rocky, Roisee)',
+    trackName: 'Am i Dreaming (Metro Boomin & A$AP Rocky, Roisee)',
     trackArtist: 'Metro Boomin & A$AP Rocky, Roisee',
     trackRuntime: '4:16',
+    image: 'purple-haze.jpeg',
+    audio: 'purplehaze.mp3',
   },
   {
     trackName: 'Surround Sound',
     trackArtist: 'JID, 21 Savage, Baby Tate',
     trackRuntime: '3:49',
+    image: 'moonage-daydream.jpg',
+    audio: 'moonagedaydream.mp3',
   },
   {
     trackName: 'Money Trees',
-    trackArtist: 'Kendrick Lamar',
+    trackArtist: 'Kendrick Lamar, Jay Rock',
     trackRuntime: '6:26',
+    image: 'gimme-shelter.jpg',
+    audio: 'gimmeshelter.mp3',
   },
 ];
 
@@ -263,64 +299,83 @@ const getTrackImage = (index) => {
 };
 
 const Playlists = () => {
-    const [isPlaying, setIsPlaying] = useState(Array(tracksData.length).fill(false));
-    const [selectedSongs, setSelectedSongs] = useState([]);
-    const audioRefs = useRef([]);
-    const [searchQuery, setSearchQuery] = useState('');
-    const togglePlay = (index) => {
+  const [isPlaying, setIsPlaying] = useState(Array(tracksData.length).fill(false));
+  const [selectedSongs, setSelectedSongs] = useState([]);
+  const [playlistTitle, setPlaylistTitle] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const audioRefs = useRef([]);
+
+  const togglePlay = (index) => {
     const newIsPlaying = [...isPlaying];
     newIsPlaying[index] = !newIsPlaying[index];
     setIsPlaying(newIsPlaying);
 
+    const audio = audioRefs.current[index];
     if (newIsPlaying[index]) {
-        audioRefs.current[index].play();
-      } else {
-        audioRefs.current[index].pause();
-      }
-      };
-      const toggleSelection = (index) => {
-      if (selectedSongs.includes(index)) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
+
+  const toggleSelection = (index) => {
+    if (selectedSongs.includes(index)) {
       setSelectedSongs(selectedSongs.filter((i) => i !== index));
-      } else {
+    } else {
       setSelectedSongs([...selectedSongs, index]);
-      }
-      };
-      const filterTracks = (trackName, trackArtist) => {
-      const query = searchQuery.toLowerCase();
-      return trackName.toLowerCase().includes(query) || trackArtist.toLowerCase().includes(query);
-      };
-      const createPlaylist = (selectedSongs) => {
-      // Implement the logic to create the playlist with the selected songs
-      console.log('Creating playlist with selected songs:', selectedSongs);
-      // You can save the playlist data to a server or perform any other necessary operations
-      };
+    }
+  };
+
+  const handleContinue = () => {
+    setShowModal(true);
+  };
+
+  const handleCreatePlaylist = () => {
+    console.log('Creating playlist:', playlistTitle, 'with selected songs:', selectedSongs);
+    setShowModal(false);
+    setPlaylistTitle(playlistTitle);
+  };
 
   return (
     <div className="playlist-page4">
-      <div className="playlist-header4">
-        <div className="playlist-header-text4">
-          <h1 className="playlist-title4">CREATE YOUR OWN PLAYLIST</h1>
+      {playlistTitle ? (
+        <div>
+          <div className="playlist-title">
+            <h2>{playlistTitle}</h2>
+          </div>
+          <div className="playlist-tracks4">
+            {selectedSongs.map((index) => {
+              const { trackName, trackArtist, trackRuntime, image, audio } = tracksData[index];
+              const trackImage = getTrackImage(index);
+
+              return (
+                <div className={`track4`} key={index}>
+                  <img src={trackImage} alt={`Track ${index + 1}`} className="track-image4" />
+                  <div className="track-details4">
+                    <p className="track-name4">{trackName}</p>
+                    <p className="track-artist4">{trackArtist}</p>
+                  </div>
+                  <div className="track-controls4">
+                    <button className="play-button4" onClick={() => togglePlay(index)}>
+                      {isPlaying[index] ? 'Pause' : 'Play'}
+                    </button>
+                    <span className="track-runtime4">{trackRuntime}</span>
+                  </div>
+                  <audio ref={(el) => (audioRefs.current[index] = el)} src={getTrackSource(index)} />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="playlist-tracks4">
+          {tracksData.map((track, index) => {
+            const { trackName, trackArtist, trackRuntime, image, audio } = track;
+            const trackImage = getTrackImage(index);
 
-      {/* Search input */}
-      <input
-        type="text"
-        placeholder="Search for tracks, artists..."
-        onChange={(e) => setSearchQuery(e.target.value)}
-        className="playlist-search4"
-      />
-
-      {/* Display tracks */}
-      <div className="playlist-tracks4">
-        {tracksData.map((track, index) => {
-          const { trackName, trackArtist, trackRuntime } = track;
-
-          return (
-            filterTracks(trackName, trackArtist, searchQuery) && (
-              <div className="track4" key={index}>
-                <audio ref={(el) => (audioRefs.current[index] = el)} src={getTrackSource(index)} />
-                <img src={getTrackImage(index)} alt={`Track ${index + 1}`} className="track-image4" />
+            return (
+              <div className={`track4`} key={index}>
+                <img src={trackImage} alt={`Track ${index + 1}`} className="track-image4" />
                 <div className="track-details4">
                   <p className="track-name4">{trackName}</p>
                   <p className="track-artist4">{trackArtist}</p>
@@ -329,33 +384,37 @@ const Playlists = () => {
                   <button className="play-button4" onClick={() => togglePlay(index)}>
                     {isPlaying[index] ? 'Pause' : 'Play'}
                   </button>
-                  <button
-                    className={`select-button ${selectedSongs.includes(index) ? 'selected' : ''}`}
-                    onClick={() => toggleSelection(index)}
-                  >
+                  <button className={`select-button ${selectedSongs.includes(index) ? 'selected' : ''}`} onClick={() => toggleSelection(index)}>
                     {selectedSongs.includes(index) ? 'Deselect' : 'Select'}
                   </button>
                   <span className="track-runtime4">{trackRuntime}</span>
                 </div>
+                <audio ref={(el) => (audioRefs.current[index] = el)} src={getTrackSource(index)} />
               </div>
-            )
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
 
-      {/* Display selected songs for playlist creation */}
-      {selectedSongs.length > 0 && (
-        <div className="playlist-creator4">
-          <h2>Create Playlist</h2>
-          <ul>
-            {selectedSongs.map((index) => (
-              <li key={index}>
-                {tracksData[index].trackName} - {tracksData[index].trackArtist}
-              </li>
-            ))}
-          </ul>
-          {/* Handle playlist creation */}
-          <button onClick={() => createPlaylist(selectedSongs)}>Create Playlist</button>
+      {!playlistTitle && (
+        <div className="playlist-continue">
+          <button onClick={handleContinue}>Continue</button>
+        </div>
+      )}
+
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={() => setShowModal(false)}>&times;</span>
+            <h2>Enter Playlist Title</h2>
+            <input
+              type="text"
+              placeholder="Enter playlist title"
+              value={playlistTitle}
+              onChange={(e) => setPlaylistTitle(e.target.value)}
+            />
+            <button onClick={handleCreatePlaylist}>Create Playlist</button>
+          </div>
         </div>
       )}
     </div>

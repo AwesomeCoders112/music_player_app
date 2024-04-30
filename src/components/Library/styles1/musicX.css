@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +15,6 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .playlist-header4 {
   display: flex;
@@ -39,23 +37,22 @@ body {
   margin-bottom: 10px;
 }
 
-.playlist-description4{
+.playlist-description4 {
   font-size: 18px;
   max-width: 600px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.playlist-tracks4{
+.playlist-tracks4 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px; 
+  margin-top: 20px;
   padding: 20px;
   width: 100%;
   max-width: 1000px;
 }
-
 
 .track4 {
   display: flex;
@@ -119,7 +116,6 @@ body {
   background-color: #169c4b;
 }
 
-
 .playlist-search4 {
   width: 350px;
   padding: 15px;
@@ -131,7 +127,6 @@ body {
   margin-bottom: 10px;
 }
 
-
 .play-button4::before {
   content: "\25B6";
 }
@@ -140,6 +135,105 @@ body {
   content: "+";
 }
 
+.select-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.select-button.selected {
+  background-color: #f44336; /* Red for deselect */
+}
+
+.select-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.playlist-continue button {
+  background-color: #1db954; /* Spotify green */
+  color: white;
+  font-size: 16px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.playlist-continue button:hover {
+  background-color: #169c4b; /* Darker green on hover */
+}
+
+.modal {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+.modal-content {
+  background-color: #121212; /* Dark background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  max-width: 400px;
+  width: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #b3b3b3; /* Light gray */
+}
+
+.modal-content h2 {
+  color: #ffffff; /* White */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #282828; /* Dark background for input */
+  color: #ffffff; /* White text */
+}
+
+.modal-content input[type="text"]::placeholder {
+  color: #b3b3b3; /* Light gray placeholder text */
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 15px;
+  background-color: #1db954; /* Spotify green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #169c4b; /* Darker green on hover */
+}
 
 @keyframes fadeIn {
   from {
@@ -153,7 +247,6 @@ body {
 .track4 {
   animation: fadeIn 0.5s ease-in-out;
 }
-
 
 @media (max-width: 768px) {
   .playlist-search4 {
