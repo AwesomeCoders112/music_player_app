@@ -32,6 +32,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   position: relative;
+  font-size: large;
 }
 
 .sidebar li:hover, .sidebar li.active {

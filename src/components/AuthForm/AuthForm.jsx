@@ -6,14 +6,16 @@ import { MDBFooter } from 'mdb-react-ui-kit';
 import { GoogleLogin } from '@react-oauth/google';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: url('https://png.pngtree.com/background/20230617/original/pngtree-spotify-with-empty-space-a-3d-rendering-picture-image_3699554.jpg');
-  background-size: cover;
-  background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url('https://png.pngtree.com/background/20230617/original/pngtree-spotify-with-empty-space-a-3d-rendering-picture-image_3699554.jpg');
+background-size: cover;
+background-position: center;
+color: #ffffff;
+font-family: Arial, sans-serif;
 `;
 
 const WelcomeContainer = styled.div`
@@ -27,6 +29,8 @@ const WelcomeText = styled.h1`
   text-align: center;
   color: yellow;
   margin-bottom: 1rem;
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const Logo = styled.img`
@@ -36,18 +40,28 @@ const Logo = styled.img`
 `;
 
 const FormContainer = styled.div`
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
+background-color: rgba(255, 255, 255, 0.9);
+padding: 2rem;
+border-radius: 8px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increased box shadow for depth */
+width: 400px;
+max-width: 90%; /* Ensure responsiveness by setting a maximum width */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+backdrop-filter: blur(8px); /* Apply backdrop filter for a frosted glass effect */
+background-image: url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
+background-size: cover;
+background-position: center;
+position: relative;
 `;
 
 const Title = styled.h1`
   text-align: center;
   color: yellow;
   margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const Form = styled.form`
@@ -60,6 +74,15 @@ const Input = styled.input`
   margin-bottom: 1rem;
   border: 1px solid #cccccc;
   border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  color: #333333;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
 `;
 
 const Button = styled.button`
@@ -70,6 +93,9 @@ const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 
   &:hover {
     background-color: #45a049;
@@ -80,11 +106,13 @@ const SwitchText = styled.p`
   text-align: center;
   margin-top: 1rem;
   color: yellow;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 
   & a {
     color: yellow;
     text-decoration: none;
     font-weight: bold;
+    transition: text-decoration 0.3s ease;
 
     &:hover {
       text-decoration: underline;
@@ -200,7 +228,7 @@ const errorMessage = (error) => {
         </div>
       </FormContainer>
       <MDBFooter bgColor='dark' className='text-center text-lg-left' style={{ height: '100px' }}>
-  <div className='text-center p-3' style={{ backgroundColor: '#3EA85C',fontSize: '1.3rem', }}>
+  <div className='text-center p-3' style={{ backgroundColor: 'green',fontSize: '1.3rem',padding: '5px',width: '29.4vw' }}>
     &copy; {new Date().getFullYear()} Copyright:{' '}
     <a className='text-light' href='https://nmamit.nitte.edu.in/'>
       TeamAwesome Coders
