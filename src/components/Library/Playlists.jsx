@@ -303,6 +303,7 @@ const Playlists = () => {
   const [selectedSongs, setSelectedSongs] = useState([]);
   const [playlistTitle, setPlaylistTitle] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showHeading, setShowHeading] = useState(true); // New state to control heading visibility
   const audioRefs = useRef([]);
 
   const togglePlay = (index) => {
@@ -334,10 +335,16 @@ const Playlists = () => {
     console.log('Creating playlist:', playlistTitle, 'with selected songs:', selectedSongs);
     setShowModal(false);
     setPlaylistTitle(playlistTitle);
+    setShowHeading(false); // Hide the heading after creating the playlist
   };
 
   return (
     <div className="playlist-page4">
+      {showHeading && (
+        <h1 style={{ textAlign: 'center', justifyContent: 'center', marginLeft: '200px', color: '#00ffcc', textShadow: '0 0 10px rgba(0, 255, 204, 0.8)', marginBottom: '-2px' }}>
+          Select the tracks you want
+        </h1>
+      )}
       {playlistTitle ? (
         <div>
           <div className="playlist-title">
