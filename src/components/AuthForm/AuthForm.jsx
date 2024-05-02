@@ -5,7 +5,6 @@ import logo from './logo.png';
 import { MDBFooter } from 'mdb-react-ui-kit';
 import { GoogleLogin } from '@react-oauth/google';
 
-
 const Container = styled.div`
 display: flex;
 flex-direction: column;
@@ -128,20 +127,18 @@ const AuthForm = ({ onLogin }) => {
   const [email, setEmail] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
-
   const responseMessage = (response) => {
     setUsername('');
     setPassword('');
     setEmail('');
     setConfirmPassword('');
+
     onLogin();
     navigate('/home');
-    alert('You have successfully logged in/signed up!');
-  };
-
-  const errorMessage = (error) => {
+};
+const errorMessage = (error) => {
     console.log(error);
-  };
+};
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -151,13 +148,16 @@ const AuthForm = ({ onLogin }) => {
       console.log('Email:', email);
       console.log('Confirm Password:', confirmPassword);
     }
+
     setUsername('');
     setPassword('');
     setEmail('');
     setConfirmPassword('');
+
     onLogin();
+    alert("Successfully Signed in");
     navigate('/home');
-    alert('You have successfully logged in/signed up!');
+    
   };
 
   const toggleForm = () => {
@@ -172,7 +172,7 @@ const AuthForm = ({ onLogin }) => {
     <Container>
       <WelcomeContainer>
         <Logo src={logo} alt="Music App Logo" />
-        <WelcomeText>musicX app!</WelcomeText>
+        <WelcomeText> musicX app!</WelcomeText>
       </WelcomeContainer>
       <FormContainer>
         <Title>{isSignUp ? 'Sign Up for a New Account' : 'Sign In to Your Account'}</Title>
@@ -226,17 +226,17 @@ const AuthForm = ({ onLogin }) => {
           </a>
         </SwitchText>
         <div>
-          <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
+            <GoogleLogin onSuccess={responseMessage} onError={errorMessage} />
         </div>
       </FormContainer>
       <MDBFooter bgColor='dark' className='text-center text-lg-left' style={{ height: '100px' }}>
-        <div className='text-center p-3' style={{ backgroundColor: 'green', fontSize: '1.3rem', padding: '5px', width: '29.4vw' }}>
-          &copy; {new Date().getFullYear()} Copyright:{' '}
-          <a className='text-light' href='https://nmamit.nitte.edu.in/'>
-            TeamAwesome Coders
-          </a>
-        </div>
-      </MDBFooter>
+  <div className='text-center p-3' style={{ backgroundColor: 'green',fontSize: '1.3rem',padding: '5px',width: '29.4vw' }}>
+    &copy; {new Date().getFullYear()} Copyright:{' '}
+    <a className='text-light' href='https://nmamit.nitte.edu.in/'>
+      TeamAwesome Coders
+    </a>
+  </div>
+</MDBFooter>
     </Container>
   );
 };
